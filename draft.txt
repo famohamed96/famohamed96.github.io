@@ -1,0 +1,58 @@
+
+// const bhPiscineLevel = `
+//     query Transaction {
+//         transaction(
+//             where: { 
+//                 type: { _ilike: "%level%" },
+//             }
+//         ) {
+//             amount
+//             path
+//             type
+//         }
+//     }
+// `;
+
+
+// query Group {
+//     group(
+//         where: {
+//             members: { userId: { _eq: 940 } },
+//             eventId: { _eq: 20 },
+//             status: { _eq: finished }  }
+//         order_by: { updatedAt: desc }
+//     ) {
+//         path
+//     }
+// }
+
+
+
+// level
+
+// query Transaction {
+//     transaction(
+//         where: { 
+//             type: { _ilike: "level" }, 
+//             
+//         }
+//     ) {
+//         amount
+//         path
+//         type
+//     }
+// }
+
+
+// query Transaction {
+//     transaction(
+//         where: {
+//             type: { _ilike: "xp" }
+//             _and: [{ path: { _nilike: "%bh-piscine%" }  }]
+//         }
+//     ) {
+//         amount
+//         path
+     
+//     }
+// }
