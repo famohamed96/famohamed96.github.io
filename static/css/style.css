@@ -1,0 +1,204 @@
+:root {
+    --color-plum: #4A3267;        /* Plum */
+    --color-blush: #DE638A;       /* Blush */
+    --color-peach: #F7B9C4;       /* Peach */
+    --color-lavender: #F3D9E5;    /* Lavender */
+    --color-lilac: #C6BADE;       /* Lilac */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F3F4;
+    color: var(--color-lilac);
+    margin: 0;
+}
+
+/* Use the color variables in your styles */
+h1 {
+    /* color: var(--color-plum); */
+    color: white;
+
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: rgb(135, 109, 109);
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Additional styling using the color variables */
+.button {
+    background-color: var(--color-peach);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px;
+}
+
+.graphs {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    
+}
+
+.info {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    
+}
+
+
+.widget {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.widget div {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centers the image and title horizontally */
+    justify-content: center;
+}
+
+.widget img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Spacing between image and text */
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .widget {
+        width: 100%;
+        /* min-width: 400px; */
+    }
+
+    .graphs {
+        flex-direction: column;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+}
+
+.graph {
+    height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+.graph-title{
+    color:#313445;
+}
+
+.welcome{
+    color:#313445;
+
+}
+/* header */
+header {
+    background-color: #313445;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 14px;
+}
+
+.logout {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 90%; /* Responsive max-width */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+#donut-chart-container div {
+    margin: 5px 0; /* Add some space between skill items */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+
+.responsive-svg {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+
+#xpPerProject {
+    width: 100%;
+    max-width: 1000px;
+    height: auto; /* Adjust height as needed */
+    margin: 0 auto; /* Center the chart on the page */
+}
+
+#svgContainer {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+}

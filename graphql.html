@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <link rel="icon" href="/static/img/dashboard-panel.png" type="image/x-icon">
+    <title>Graphql</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+
+    <style>
+        #tooltip {
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.75);
+          color: #fff;
+          padding: 5px;
+          border-radius: 3px;
+          font-size: 12px;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <div class="user-info">
+            <img src="/static/img/user.png" alt="User Icon">
+            <span  id="userName" class="userName"></span>
+            <a  class="logout" onclick="handleLogout()">
+                <img src="/static/img/logout.png" alt="Logout">
+            </a>
+        </div>
+    </header>
+    
+    <h1 class="welcome">Welcome to My Website</h1>
+    <section class="dashboard">
+        <div class="info">
+            <div  style="background-color: #4A3267;" class="widget">
+                <img src="/static/img/comet.png" alt="comet">
+                <div>
+                <h1>Audits Ratio</h1>
+            </div>
+                <h1 id="auditRatio">Audit Ratio</h1>
+                <div class="svg-container" id="svgContainer"></div>
+                <div id="tooltip"></div>
+
+            </div>
+            <div  style="background-color: lightblue;"class="widget">
+                <img src="/static/img/medal.png" alt="medal">
+
+                <div>
+                <h1>XP</h1>
+            </div>
+
+                <h1 id="xp"></h1>
+
+            </div>
+            <div  style="background-color: #DE638A;" class="widget">
+                <img src="/static/img/ranking-stars.png" alt="ranking-stars">
+
+                <div>
+                <h1>LEVELS</h1>
+            </div>
+
+                <h1 id="level"></h1>
+            </div>
+        </div>
+
+        <div class="graphs">
+            <div class="widget">
+                <h1 class="graph-title">XP Earned Over Time</h1>
+           <div id="xpPerProject"></div>
+            </div>
+            <div class="widget">
+                <h1 class="graph-title" >SKILLS</h1>
+                <div id="donut-chart-container"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="static/js/index.js" ></script>
+
+</body>
+</html>

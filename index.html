@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F3F4;
+
+            /* background-color: #B7E9F4; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            margin: 0; /* Updated margin */
+        }
+        .container h1 {
+            color: #239BC2;
+        }
+        .container .form-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .container .image-container {
+            flex: 1;
+            border-radius: 5px;
+            margin-right: 20px;
+            overflow: hidden;
+            display: flex; /* Added display property */
+            align-items: flex-end; /* Added align-items property */
+        }
+        .container .image-container img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .container .form-container form:not(.active) {
+            display: none;
+        }
+        .container input[type="text"],
+        .container input[type="password"],
+        .container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #239BC2;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .container input[type="submit"]:hover {
+            background-color: #239BC2;
+
+        }
+        .container p {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .container p a {
+            color: #239BC2;
+            text-decoration: none;
+        }
+        .card {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="static/img/2797925-02.jpg" alt="Background Image">
+        </div>
+        <div class="form-container">
+            <div class="card">
+                <h2>Hello,</h2>
+                <h1>Welcome!</h1>
+                <form id="loginForm" class="active">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                </form>
+                <div id="error-message" style="color: red; display: none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/auth.js" ></script>
+</body>
+</html>
